@@ -1,4 +1,3 @@
-
 !(function($) {
   "use strict";
 
@@ -53,7 +52,6 @@
     }
   });
 
-  //Typing effect with erase animation
   const words = ["Techie.", "Android Developer.", "Problem Solver.", "Singer."];
   let i = 0;
   let timer;
@@ -71,8 +69,7 @@
     };
     loopTyping();
   };
-
-  setInterval(function deletingEffect() {
+function deletingEffect() {
     let word = words[i].split("");
     var loopDeleting = function() {
       if (word.length > 0) {
@@ -90,7 +87,7 @@
       timer = setTimeout(loopDeleting, 100);
     };
     loopDeleting();
-  }, 4100);
+  }
 
   typingEffect();
 
