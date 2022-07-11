@@ -2,7 +2,8 @@
   "use strict";
 
   $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+     location.hostname == this.hostname) {
       var hash = this.hash;
       var target = $(hash);
       if (target.length) {
@@ -105,7 +106,6 @@ function deletingEffect() {
     }
   }
 
-  // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
@@ -167,7 +167,6 @@ function deletingEffect() {
     }
   });
 
-  // Porfolio isotope and filter
   $(window).on('load', function() {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
